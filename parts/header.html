@@ -1,0 +1,32 @@
+<!--
+  header – sailingloc (mvp)
+  - logo + titre
+  - recherche produits
+  - navigation principale
+  - mini-panier woocommerce
+-->
+
+<!-- wp:group {"tagName":"header","align":"full","style":{
+  "spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},
+  "border":{"bottom":{"color":"var(--wp--preset--color--bleu-profond)","width":"1px"}},
+  "color":{"background":"#FFFFFF"}
+},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
+
+  <!-- zone logo + titre -->
+  <!-- wp:group {"layout":{"type":"flex","gap":"var:preset|spacing|24","verticalAlignment":"center"}} -->
+    <!-- wp:site-logo {"width":48} /-->
+    <!-- wp:site-title {"level":2,"style":{"typography":{"fontWeight":"700"}}} /-->
+  <!-- /wp:group -->
+
+  <!-- recherche produits (woocommerce) -->
+  <!-- wp:woocommerce/product-search {"placeholder":"rechercher un bateau…"} /-->
+
+  <!-- navigation + mini-panier -->
+  <!-- wp:group {"layout":{"type":"flex","gap":"var:preset|spacing|24","verticalAlignment":"center"}} -->
+    <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"},"style":{"typography":{"textTransform":"none"}}} /-->
+
+    <!-- mini-panier (nécessite woo) -->
+    <!-- wp:woocommerce/mini-cart /-->
+  <!-- /wp:group -->
+
+<!-- /wp:group -->
