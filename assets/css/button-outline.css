@@ -1,0 +1,22 @@
+{
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "variations": {
+          "outline": {
+            "border": { "width": "1px", "color": "var(--wp--preset--color--bleu-profond)" },
+            "color":  { "background": "transparent", "text": "var(--wp--preset--color--bleu-profond)" },
+            "spacing": {
+              "padding": {
+                "top": "calc(0.6rem - 1px)",
+                "right": "calc(1rem - 1px)",
+                "bottom": "calc(0.6rem - 1px)",
+                "left": "calc(1rem - 1px)"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

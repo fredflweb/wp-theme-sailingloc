@@ -1,22 +1,21 @@
 /*
-Theme Name: SailingLoc
-Theme URI: https://sailingloc.example
+Theme Name: SailingLoc FSE
+Theme URI: https://sailingloc.fr
 Author: FL Web
 Author URI: https://flweb.fr
-Description: Thème bloc (FSE) minimal pour SailingLoc — identité via theme.json, overrides WooCommerce/YITH via css ciblés. Logique métier dans mu-plugins.
-Requires at least: 6.3
-Tested up to: 6.6
+Description: Thème Full Site Editing conçu pour la plateforme de location de bateaux SailingLoc. Basé sur WordPress 6.4+, compatible WooCommerce et YITH Multi-Vendor.
+Requires at least: 6.4
+Tested up to: 6.7
 Requires PHP: 7.4
-Version: 0.1.0
+Version: 1.0
 License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sailingloc
-Tags: full-site-editing, block-patterns, custom-colors, custom-logo, custom-menu, e-commerce
-
-Update URI: false
+Tags: full-site-editing, woocommerce, block-patterns, translation-ready
 */
 
-/* ce fichier reste volontairement vide. 
-   - styles globaux : theme.json
-   - compat ponctuelle : /assets/css/*.css (enqueue conditionnelle)
+/*
+ Ce fichier déclare les métadonnées du thème.
+ Les styles globaux sont définis dans theme.json.
+ Utiliser assets/css/theme.css uniquement pour des correctifs spécifiques.
 */

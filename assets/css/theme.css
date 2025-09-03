@@ -1,0 +1,15 @@
+/* 
+ Fichier CSS additionnel.
+ Utiliser pour corriger des plugins tiers (ex: YITH Frontend Manager).
+ Tous les styles globaux doivent être définis dans theme.json.
+*/
+
+/* Header sticky simple */
+.wp-site-blocks > header,
+.wp-block-group.alignwide:has(> .wp-block-group.alignwide) {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff; /* ou var(--wp--preset--color--base) si tu as un token */
+  box-shadow: 0 1px 8px rgba(0,0,0,.06);
+}

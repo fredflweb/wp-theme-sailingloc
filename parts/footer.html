@@ -1,63 +1,8 @@
 <!--
-  footer – sailingloc (mvp)
-  - 3 colonnes : identité / navigation / légal
-  - barre de bas de page avec © + crédit
+  Partie de modèle : Footer
+  Utilisée en bas de toutes les pages.
 -->
-
-<!-- wp:group {"tagName":"footer","align":"full","style":{
-  "spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|32"},
-  "border":{"top":{"color":"var(--wp--preset--color--bleu-profond)","width":"1px"}},
-  "color":{"background":"#FFFFFF"}
-},"layout":{"type":"constrained"}} -->
-
-  <!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
-    <!-- wp:column -->
-      <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"var:preset|spacing|16"}}} -->
-        <!-- wp:site-logo {"width":40} /-->
-        <!-- wp:site-title {"level":3,"style":{"typography":{"fontWeight":"700"}}} /-->
-        <!-- wp:paragraph {"placeholder":"baseline / phrase d’accroche (optionnelle)"} -->
-        <p>baseline du projet (optionnelle)</p>
-        <!-- /wp:paragraph -->
-        <!-- wp:social-links {"iconBackgroundColorValue":"transparent","style":{"spacing":{"blockGap":"12px"}}} -->
-          <!-- wp:social-link {"service":"facebook"} /-->
-          <!-- wp:social-link {"service":"instagram"} /-->
-          <!-- wp:social-link {"service":"x"} /-->
-        <!-- /wp:social-links -->
-      <!-- /wp:group -->
-    <!-- /wp:column -->
-
-    <!-- wp:column -->
-      <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}}} -->
-      <h3>navigation</h3>
-      <!-- /wp:heading -->
-      <!-- wp:navigation {"overlayMenu":"never","ariaLabel":"menu de pied de page","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"textTransform":"none"}}} /-->
-    <!-- /wp:column -->
-
-    <!-- wp:column -->
-      <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"700"}}} -->
-      <h3>légal</h3>
-      <!-- /wp:heading -->
-      <!-- wp:navigation {"overlayMenu":"never","ariaLabel":"liens légaux","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"textTransform":"none"}}} -->
-        <!-- ajoute ici : cgv vendeurs, cgv location, politique de confidentialité, mentions légales -->
-      <!-- /wp:navigation -->
-    <!-- /wp:column -->
-  <!-- /wp:columns -->
-
-  <!-- barre basse -->
-  <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"},"padding":{"top":"var:preset|spacing|16"}}, "border":{"top":{"color":"#E5E7EB","width":"1px"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"center"}} -->
-    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"8px"}}} -->
-      <!-- wp:paragraph -->
-      <p>© 2025 —</p>
-      <!-- /wp:paragraph -->
-      <!-- wp:site-title {"level":0,"isLink":false} /-->
-    <!-- /wp:group -->
-
-    <!-- wp:paragraph -->
-    <p><a href="https://flweb.fr" rel="nofollow">conçu par fl web</a></p>
-    <!-- /wp:paragraph -->
-  <!-- /wp:group -->
-
-  <!-- notices boutique (woo) -->
-  <!-- wp:woocommerce/store-notices /-->
-
+<!-- wp:group {"tagName":"footer","layout":{"type":"constrained"}} -->
+  <!-- wp:paragraph --> <p>&copy; 2025 SailingLoc. Tous droits réservés.</p> <!-- /wp:paragraph -->
+  <!-- wp:navigation {"ref":1,"layout":{"type":"flex","orientation":"horizontal"}} /-->
 <!-- /wp:group -->

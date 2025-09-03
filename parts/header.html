@@ -1,32 +1,49 @@
 <!--
-  header – sailingloc (mvp)
-  - logo + titre
-  - recherche produits
-  - navigation principale
-  - mini-panier woocommerce
+  Partie de modèle : Header (SailingLoc)
 -->
 
-<!-- wp:group {"tagName":"header","align":"full","style":{
-  "spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},
-  "border":{"bottom":{"color":"var(--wp--preset--color--bleu-profond)","width":"1px"}},
-  "color":{"background":"#FFFFFF"}
-},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20)">
+  
+  <!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+  <div class="wp-block-group alignwide">
+    
+    <!-- Zone gauche : logo + titre -->
+    <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+    <div class="wp-block-group">
+      <!-- Logo (optionnel) : définissable dans Apparence > Personnaliser -->
+      <!-- wp:site-logo {"width":60} /-->
 
-  <!-- zone logo + titre -->
-  <!-- wp:group {"layout":{"type":"flex","gap":"var:preset|spacing|24","verticalAlignment":"center"}} -->
-    <!-- wp:site-logo {"width":48} /-->
-    <!-- wp:site-title {"level":2,"style":{"typography":{"fontWeight":"700"}}} /-->
+      <!-- Titre du site (niveau 0 = span, pas de H1) -->
+      <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"constrained"}} -->
+      <div class="wp-block-group">
+        <!-- wp:site-title {"level":0} /-->
+      </div>
+      <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Zone droite : navigation + outils boutique -->
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+    <div class="wp-block-group">
+      
+      <!-- Navigation principale -->
+      <!-- 
+        Astuce : va dans Apparence > Éditeur > Navigation pour lier/éditer le menu.
+        Ajoute ariaLabel pour l’accessibilité.
+      -->
+      <!-- wp:navigation {"ariaLabel":"Menu principal","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"},"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} /-->
+      
+      <!-- Recherche produits (optionnel) : décommente si souhaité -->
+      <!-- wp:woocommerce/product-search {"showLabel":false,"placeholder":"Rechercher un bateau…"} /-->
+
+      <!-- Mini-panier WooCommerce -->
+      <!-- wp:woocommerce/mini-cart {"addToCartBehaviour":"open_drawer","hasHiddenPrice":false} /-->
+    </div>
+    <!-- /wp:group -->
+
+  </div>
   <!-- /wp:group -->
 
-  <!-- recherche produits (woocommerce) -->
-  <!-- wp:woocommerce/product-search {"placeholder":"rechercher un bateau…"} /-->
-
-  <!-- navigation + mini-panier -->
-  <!-- wp:group {"layout":{"type":"flex","gap":"var:preset|spacing|24","verticalAlignment":"center"}} -->
-    <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"},"style":{"typography":{"textTransform":"none"}}} /-->
-
-    <!-- mini-panier (nécessite woo) -->
-    <!-- wp:woocommerce/mini-cart /-->
-  <!-- /wp:group -->
-
+</div>
 <!-- /wp:group -->
