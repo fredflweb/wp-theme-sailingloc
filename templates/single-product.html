@@ -1,42 +1,47 @@
-<!-- en-tête -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- contenu principal : fiche produit -->
-<!-- wp:group {"layout":{"type":"constrained"},"tagName":"main"} -->
-<main class="wp-block-group">
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group"><!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"width":"55%"} -->
+<div class="wp-block-column" style="flex-basis:55%"><!-- wp:woocommerce/product-image-gallery /--></div>
+<!-- /wp:column -->
 
-  <!-- wp:columns {"align":"wide"} -->
-  <div class="wp-block-columns alignwide">
+<!-- wp:column {"width":"45%"} -->
+<div class="wp-block-column" style="flex-basis:45%"><!-- wp:post-title {"__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
 
-    <!-- colonne images -->
-    <!-- wp:column {"width":"55%"} -->
-    <div class="wp-block-column" style="flex-basis:55%">
-      <!-- wp:woocommerce/product-image-gallery /-->
-    </div>
-    <!-- /wp:column -->
+<!-- wp:woocommerce/product-rating {"isDescendentOfSingleProductTemplate":true} /-->
 
-    <!-- colonne résumé produit avec hooks Woo -->
-    <!-- wp:column {"width":"45%"} -->
-    <div class="wp-block-column" style="flex-basis:45%">
-      <!-- wp:woocommerce/product-summary /-->
-      <!-- YITH injecte ici son formulaire de réservation -->
-    </div>
-    <!-- /wp:column -->
+<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true} /-->
 
-  </div>
-  <!-- /wp:columns -->
+<!-- wp:woocommerce/product-summary {"isDescendentOfSingleProductTemplate":true} /-->
 
-  <!-- bloc pédagogique personnalisé -->
-  <!-- wp:pattern {"slug":"sailingloc/notice-locataire"} /-->
+<!-- wp:woocommerce/add-to-cart-form /-->
 
-  <!-- détails complémentaires -->
-  <!-- wp:woocommerce/product-details /-->
+<!-- wp:woocommerce/product-meta {"metadata":{"ignoredHookedBlocks":["core/post-terms"]}} -->
+<div class="wp-block-woocommerce-product-meta"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:woocommerce/product-sku /-->
 
-  <!-- produits similaires -->
-  <!-- wp:woocommerce/related-products /-->
+<!-- wp:post-terms {"term":"product_cat","prefix":"Catégorie : "} /-->
 
-</main>
+<!-- wp:post-terms {"term":"product_tag","prefix":"Étiquettes :"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:woocommerce/product-meta -->
+
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":3} -->
+<h3 class="wp-block-heading has-text-align-left">⚠ Note au locataire</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>merci de <strong>télécharger, lire attentivement et accepter le contrat de location</strong> avant tout règlement.<br><br>le <strong>paiement de la réservation vaut acceptation pleine et entière du contrat</strong>, de ses conditions et de ses annexes.  Sans contrat signé retourné, la location ne sera pas validée.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:woocommerce/product-details -->
+<div class="wp-block-woocommerce-product-details alignwide"></div>
+<!-- /wp:woocommerce/product-details --></main>
 <!-- /wp:group -->
 
-<!-- pied de page -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

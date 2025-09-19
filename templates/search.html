@@ -1,38 +1,25 @@
-<!-- en-tête -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- contenu principal -->
-<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
-<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"80%"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">recherche</h1>
+<!-- /wp:heading -->
 
-  <!-- titre dynamique -->
-  <!-- wp:post-title {"level":1,"textAlign":"center"} /-->
+<!-- wp:search {"showLabel":false,"buttonText":"chercher"} /-->
 
-  <!-- champ de recherche -->
-  <!-- wp:search {"showLabel":false,"buttonText":"chercher","buttonPosition":"button-inside"} /-->
+<!-- wp:query {"queryId":1,"query":{"postType":["post","page"],"search":"","inherit":true,"perPage":10}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-title {"level":3,"isLink":true} /-->
 
-  <!-- résultats -->
-  <!-- wp:query {"queryId":1,"query":{"postType":["post","page"],"search":"","inherit":true}} -->
-  <div class="wp-block-query">
+<!-- wp:post-excerpt /-->
+<!-- /wp:post-template -->
 
-    <!-- boucle des résultats -->
-    <!-- wp:post-template -->
-      <!-- wp:post-title {"level":3,"isLink":true} /-->
-      <!-- wp:post-excerpt /-->
-    <!-- /wp:post-template -->
-
-    <!-- si aucun résultat -->
-    <!-- wp:query-no-results -->
-      <!-- wp:paragraph {"align":"center"} -->
-      <p class="has-text-align-center">aucun résultat. Essayez un autre mot-clé.</p>
-      <!-- /wp:paragraph -->
-    <!-- /wp:query-no-results -->
-
-  </div>
-  <!-- /wp:query -->
-
-</div>
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>aucun résultat.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
 <!-- /wp:group -->
 
-<!-- pied de page -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

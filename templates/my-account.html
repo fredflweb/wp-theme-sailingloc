@@ -1,18 +1,11 @@
-<!-- en-tête du site -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- contenu principal : espace client WooCommerce -->
-<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
-<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"80%"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">mon compte</h1>
+<!-- /wp:heading -->
 
-  <!-- titre dynamique, éditable depuis l’interface WP -->
-  <!-- wp:post-title {"level":1,"textAlign":"center"} /-->
-
-  <!-- contenu WooCommerce : mon compte -->
-  <!-- wp:woocommerce/my-account /-->
-
-</div>
+<!-- wp:woocommerce/my-account /--></div>
 <!-- /wp:group -->
 
-<!-- pied de page -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

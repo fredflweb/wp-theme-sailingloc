@@ -344,18 +344,3 @@ add_action( 'pre_get_terms', function( $term_query ) {
         // $term_query->query_vars['hide_empty'] = true; // optionnel
     }
 }, 10, 1 );
-
-/* 9 SailingLoc Rediriger la boutique vers la recherche YITH Booking  */
-
-
-add_action( 'template_redirect', function() {
-    if ( is_shop() && ! isset($_GET['yith-wcbk-booking-search']) ) {
-        $url = add_query_arg(
-            'yith-wcbk-booking-search',
-            'search-bookings',
-            get_permalink( wc_get_page_id( 'shop' ) )
-        );
-        wp_safe_redirect( $url );
-        exit;
-    }
-});

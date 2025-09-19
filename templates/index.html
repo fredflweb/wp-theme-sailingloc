@@ -1,15 +1,11 @@
-<!-- en-tête -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- contenu principal -->
-<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
-<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"80%"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="wp-block-heading has-text-align-center">contenu</h1>
+<!-- /wp:heading -->
 
-  <!-- contenu dynamique (fallback) -->
-  <!-- wp:post-content /-->
-
-</div>
+<!-- wp:post-content {"layout":{"type":"constrained"}} /--></div>
 <!-- /wp:group -->
 
-<!-- pied de page -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->
