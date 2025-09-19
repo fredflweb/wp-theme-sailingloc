@@ -1,19 +1,33 @@
+<!-- en-tête du site -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"60px","bottom":"60px"}}}} -->
+<!-- contenu principal centré avec marges verticales -->
+<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main", "style":{"spacing":{"padding":{"top":"60px","bottom":"60px"}}}} -->
 <div class="wp-block-group" style="padding-top:60px;padding-bottom:60px">
-  <!-- wp:heading {"level":1} -->
-  <h1 class="wp-block-heading">page introuvable</h1>
+
+  <!-- titre dynamique traduisible via l’éditeur de site -->
+  <!-- wp:heading {"level":1,"textAlign":"center"} -->
+  <h1 class="wp-block-heading has-text-align-center">page introuvable</h1>
   <!-- /wp:heading -->
-  <!-- wp:paragraph -->
-  <p>le contenu demandé n’existe pas ou a été déplacé.</p>
+
+  <!-- texte d’explication -->
+  <!-- wp:paragraph {"align":"center"} -->
+  <p class="has-text-align-center">le contenu demandé n’existe pas ou a été déplacé.</p>
   <!-- /wp:paragraph -->
-  <!-- wp:buttons -->
-  <div class="wp-block-buttons"><!-- wp:button -->
-  <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/">retour à l’accueil</a></div>
-  <!-- /wp:button --></div>
+
+  <!-- bouton retour à l’accueil -->
+  <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+  <div class="wp-block-buttons">
+    <!-- wp:button -->
+    <div class="wp-block-button">
+      <a class="wp-block-button__link wp-element-button" href="/">retour à l’accueil</a>
+    </div>
+    <!-- /wp:button -->
+  </div>
   <!-- /wp:buttons -->
+
 </div>
 <!-- /wp:group -->
 
+<!-- pied de page du site -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

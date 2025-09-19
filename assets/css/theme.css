@@ -4,12 +4,238 @@
  Tous les styles globaux doivent être définis dans theme.json.
 */
 
-/* Header sticky simple */
-.wp-site-blocks > header,
-.wp-block-group.alignwide:has(> .wp-block-group.alignwide) {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #fff; /* ou var(--wp--preset--color--base) si tu as un token */
-  box-shadow: 0 1px 8px rgba(0,0,0,.06);
+/* --- HERO SailingLoc : Search form YITH #350 --- */
+
+/* grille : Catégories | Début | Fin | Bouton */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form__fields{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+
+/* labels compacts */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form__row__label{
+  margin: 0 0 6px;
+  font-weight: 600;
+  color: #00304a;
+}
+
+/* champs standards */
+.yith-wcbk-booking-search-form-350 input[type="text"],
+.yith-wcbk-booking-search-form-350 select{
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #00304a;
+  line-height: 1.2;
+}
+
+/* --- dates : supprimer le « bloc blanc » et garder l’input visible --- */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-date-picker-wrapper{
+  position: relative;
+  margin-bottom: 0 !important; /* pas d’espace parasite */
+}
+
+/* input technique YITH : présent mais à hauteur 0 */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-date-picker-wrapper input.yith-wcbk-date-picker{
+  display: block;              /* reste dans le flux pour YITH */
+  height: 0 !important;        /* ne prend pas de place */
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  line-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* input visible (readonly) */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-date-picker-wrapper input[readonly]{
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #00304a;
+  width: 100%;
+  padding-right: 36px; /* place pour l’icône calendrier */
+}
+
+/* icône calendrier bien centrée */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-booking-date-icon{
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* calendrier au-dessus du hero/header */
+.yith-wcbk-date-picker.ui-datepicker,
+.ui-datepicker{
+  z-index: 99999 !important;
+}
+
+/* bouton */
+.yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form-submit{
+  background: #ffd60a;
+  color: #00304a;
+  border-radius: 6px;
+  padding: 10px 18px;
+  height: 44px;
+}
+.yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form-submit:hover{
+  background: #00304a;
+  color: #ffd60a;
+}
+
+/* tuer les <p> automatiques éventuels */
+.yith-wcbk-booking-search-form-350 p{ margin: 0 !important; }
+
+/* mobile */
+@media (max-width: 782px){
+  .yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form__fields{
+    grid-template-columns: 1fr;
+  }
+  .yith-wcbk-booking-search-form-350 .yith-wcbk-booking-search-form-submit{
+    width: 100%;
+  }
+}
+
+/* select2 multi (catégories) */
+.yith-wcbk-booking-search-form-350 .select2-container--default .select2-selection--multiple{
+  min-height: 44px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+.yith-wcbk-booking-search-form-350 .select2-container--default .select2-selection--multiple .select2-selection__choice{
+  margin-top: 6px;
+}
+
+/* placeholders lisibles */
+.yith-wcbk-booking-search-form-350 ::placeholder{
+  color: #64748b;
+  opacity: 1;
+}
+
+
+/* --- Boutique : Search form YITH #382 (fix clic et alignements) --- */
+
+/* grille : étiquettes | début | fin | catégories | personnes | bouton */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form__fields{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr) auto;
+  gap:14px;
+  align-items:start;
+}
+
+/* labels */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form__row__label{
+  margin:0 0 6px;
+  font-weight:600;
+  color:#00304a;
+}
+
+/* champs standards */
+.yith-wcbk-booking-search-form-382 input[type="text"],
+.yith-wcbk-booking-search-form-382 select{
+  height:44px;
+  padding:10px 12px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  background:#ffffff;
+  color:#00304a;
+  line-height:1.2;
+  width:100%;
+}
+
+/* Nettoyage balises auto du plugin */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form__row p{ margin:0 !important; }
+.yith-wcbk-booking-search-form-382 .yith-wcbk-date-picker-wrapper br{ display:none; }
+
+/* wrapper date */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-date-picker-wrapper{
+  position:relative;
+  margin-bottom:0 !important;
+  cursor:pointer; /* main sur toute la zone */
+}
+
+/* VRAI input (celui qui ouvre le calendrier) : couvre toute la zone, invisible mais cliquable */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-date-picker-wrapper input.yith-wcbk-date-picker{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:44px;
+  width:100%;
+  opacity:0;           /* plus fiable que color:transparent pour les clics/focus */
+  z-index:3;
+  pointer-events:auto; /* reçoit les clics */
+  border:0 !important; /* pas de bordure fantôme */
+}
+
+/* Champ formaté visible : non cliquable (laisse passer le clic au vrai input) */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-date-picker-wrapper .yith-wcbk-date-picker--formatted{
+  display:block;
+  height:44px;
+  padding:10px 12px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  background:#fff;
+  color:#00304a;
+  width:100%;
+  padding-right:36px;
+  pointer-events:none; /* clé : pas d’interception du clic */
+}
+
+/* icône calendrier centrée */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-date-icon{
+  position:absolute;
+  right:10px; top:50%;
+  transform:translateY(-50%);
+  z-index:4;
+}
+
+/* bouton */
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form-submit{
+  background:#ffd60a; color:#00304a;
+  border-radius:6px; padding:10px 18px; height:44px;
+  cursor:pointer;
+}
+.yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form-submit:hover{
+  background:#00304a; color:#ffd60a;
+}
+
+/* select2 à 44px */
+.yith-wcbk-booking-search-form-382 .select2-container .select2-selection--single{
+  height:44px; border:1px solid #cbd5e1; border-radius:6px;
+}
+.yith-wcbk-booking-search-form-382 .select2-selection--single .select2-selection__rendered{
+  line-height:44px; padding-left:12px;
+}
+.yith-wcbk-booking-search-form-382 .select2-selection--single .select2-selection__arrow{ height:44px; }
+.yith-wcbk-booking-search-form-382 .select2-container--default .select2-selection--multiple{
+  min-height:44px; border:1px solid #cbd5e1; border-radius:6px;
+}
+.yith-wcbk-booking-search-form-382 .select2-container--default .select2-selection--multiple .select2-selection__choice{
+  margin-top:6px;
+}
+
+/* mobile */
+@media (max-width: 782px){
+  .yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form__fields{
+    grid-template-columns:1fr;
+  }
+  .yith-wcbk-booking-search-form-382 .yith-wcbk-booking-search-form-submit{ width:100%; }
+}
+
+/* datepicker au-dessus */
+.yith-wcbk-date-picker.ui-datepicker, .ui-datepicker{ z-index:99999 !important; }
+
+
+
+
+.css-naviguant{
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }

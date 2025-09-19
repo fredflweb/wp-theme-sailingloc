@@ -1,0 +1,51 @@
+functions.php
+style.css
+theme.json
+Screenshot.png
+
+[asset]
+_[CSS]
+	button-outline.css
+	theme.css
+
+_[JS]
+	theme.js
+
+[PARTS]
+	footer.html
+	header.html
+
+[patterns]
+	articles-teasers.php
+	bandeau-contact.php
+	cta.php
+	cta-proprietaire.php
+	etapes-fonctionnement.php
+	faq.php
+	grille-produits.php
+	hero.php
+	hero-recherche.php
+	newsletter-bandeau.php
+	notice-locataire.php
+	temoignages.php
+	valeurs-rse.php
+
+
+
+[templates]
+
+	404.html
+	archive.html
+	archive-product.html
+	cart.html
+	checkout.html
+	front-page.html
+	home.html
+	index.html
+	my-account.html
+	page.html
+	search.html
+	single.html
+	single-product.html
+
+

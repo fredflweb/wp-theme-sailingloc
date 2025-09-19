@@ -1,12 +1,18 @@
+<!-- en-tête du site -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- contenu principal centré -->
+<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
 <div class="wp-block-group">
-  <!-- wp:heading {"level":1} -->
-  <h1 class="wp-block-heading">paiement</h1>
-  <!-- /wp:heading -->
+
+  <!-- titre dynamique éditable dans WordPress -->
+  <!-- wp:post-title {"level":1,"textAlign":"center"} /-->
+
+  <!-- bloc de finalisation WooCommerce -->
   <!-- wp:woocommerce/checkout /-->
+
 </div>
 <!-- /wp:group -->
 
+<!-- pied de page du site -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

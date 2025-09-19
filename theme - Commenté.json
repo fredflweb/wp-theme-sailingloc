@@ -1,0 +1,141 @@
+{
+// Déclaration du schéma JSON utilisé par WordPress pour valider la structure du fichier
+// Cela permet aux éditeurs modernes (ex. VSCode) d'avoir l'autocomplétion et la validation
+
+  "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+  "version": 2,
+
+  "settings": {
+// Active les outils d'apparence dans l'éditeur (typographie, couleur, etc.)
+    "appearanceTools": true,
+// Définition de la palette de couleurs personnalisée
+    "color": {
+      "defaultPalette": false, // désactive la palette par défaut de WordPress
+      "defaultGradients": false,
+      "defaultDuotone": false,
+      "palette": [
+        { "slug": "bleu-profond", "name": "Bleu profond", "color": "#00304A" },
+        { "slug": "vert-ocean",  "name": "Vert océan",   "color": "#027361" },
+        { "slug": "bleu-clair",  "name": "Bleu clair",   "color": "#38B6FF" },
+        { "slug": "jaune",       "name": "Jaune",        "color": "#FFD60A" },
+        { "slug": "rouge",       "name": "Rouge",        "color": "#D12125" },
+        { "slug": "vert-vif",    "name": "Vert vif",     "color": "#8ED024" }
+      ]
+    },
+// Configuration de la largeur des contenus
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1280px"
+    },
+
+    "spacing": {
+      "spacingScale": { "steps": 0 }, // on utilise uniquement les tailles personnalisées
+      "spacingSizes": [
+        { "name": "1", "size": "0.5rem",                         "slug": "05" },
+        { "name": "2", "size": "1rem",                           "slug": "10" },
+        { "name": "3", "size": "min(1.5rem, 2vw)",               "slug": "20" },
+        { "name": "4", "size": "min(2.5rem, 3vw)",               "slug": "30" },
+        { "name": "5", "size": "min(4rem, 5vw)",                 "slug": "40" },
+        { "name": "6", "size": "min(6.5rem, 8vw)",               "slug": "50" },
+        { "name": "7", "size": "min(10.5rem, 13vw)",             "slug": "60" }
+      ],
+      "units": ["%", "px", "em", "rem", "vh", "vw"]
+    },
+// Définition des polices et tailles de texte
+    "typography": {
+      "fluid": true, // active les tailles de texte adaptatives (fluid typography)
+      "fontFamilies": [
+        { "slug": "open-sans",   "name": "Open Sans",   "fontFamily": "Open Sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" },
+        { "slug": "montserrat",  "name": "Montserrat",  "fontFamily": "Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" }
+      ],
+      "fontSizes": [
+        { "slug": "small",   "name": "Small",   "size": "0.9rem",   "fluid": false },
+        { "slug": "medium",  "name": "Medium",  "size": "1rem",     "fluid": false },
+        { "slug": "large",   "name": "Large",   "size": "1.8rem",   "fluid": { "min": "1.4rem", "max": "1.8rem" } },
+        { "slug": "x-large", "name": "X-Large", "size": "2.4rem",   "fluid": { "min": "1.9rem", "max": "2.4rem" } },
+        { "slug": "xx-large","name": "XX-Large","size": "3.1rem",   "fluid": { "min": "2.4rem", "max": "3.1rem" } }
+      ],
+      "writingMode": true // permet des rotations de texte (utile pour designs verticaux ou RTL)
+    },
+// Permet aux blocs de respecter les alignements avec les paddings root
+    "useRootPaddingAwareAlignments": true
+  },
+// Styles globaux appliqués à tout le site
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--base, #ffffff)", // fond blanc par défaut
+      "text": "var(--wp--preset--color--bleu-profond)" // texte principal bleu foncé
+    },
+
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--open-sans)",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "fontStyle": "normal",
+      "fontWeight": "400",
+      "lineHeight": "1.55"
+    },
+
+    "spacing": {
+      "blockGap": "1.2rem", // espacement vertical entre les blocs
+      "padding": { "left": "var(--wp--preset--spacing--50)", "right": "var(--wp--preset--spacing--50)" } // marges internes gauche droite globales
+    },
+// Style des éléments HTML de base (h1, liens, boutons, etc.)
+    "elements": {
+      "heading": {
+        "color": { "text": "var(--wp--preset--color--bleu-profond)" },
+        "typography": { "fontFamily": "var(--wp--preset--font-family--montserrat)", "lineHeight": "1.2" }
+      },
+      "h1": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)" } },
+      "h2": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+      "h3": { "typography": { "fontSize": "var(--wp--preset--font-size--large)" } },
+
+      "link": {
+        "color": { "text": "var(--wp--preset--color--bleu-profond)" },
+        ":hover": { "typography": { "textDecoration": "none" } }
+      },
+
+      "button": {
+        "border": { "radius": ".33rem", "color": "var(--wp--preset--color--bleu-profond)" },
+        "color": { "background": "var(--wp--preset--color--bleu-profond)", "text": "#ffffff" },
+        "spacing": { "padding": { "top": "0.6rem", "right": "1rem", "bottom": "0.6rem", "left": "1rem" } },
+        "typography": { "fontFamily": "var(--wp--preset--font-family--montserrat)", "fontWeight": "600", "textTransform": "uppercase" },
+        ":hover": {
+          "color": { "background": "var(--wp--preset--color--vert-ocean)", "text": "#ffffff" },
+          "border": { "color": "var(--wp--preset--color--vert-ocean)" }
+        },
+        ":focus": {
+          "color": { "background": "var(--wp--preset--color--bleu-clair)", "text": "#ffffff" },
+          "outline": { "color": "var(--wp--preset--color--bleu-profond)", "offset": "2px" },
+          "border": { "color": "var(--wp--preset--color--bleu-clair)" }
+        },
+        ":active": { "color": { "background": "var(--wp--preset--color--rouge)", "text": "#ffffff" } }
+      },
+
+      "caption": {
+        "color": { "text": "var(--wp--preset--color--bleu-clair)" },
+        "typography": { "fontFamily": "var(--wp--preset--font-family--open-sans)", "fontSize": "0.85rem" }
+      }
+    },
+// Style personnalisé pour certains blocs natifs
+    "blocks": {
+      "core/buttons": { "spacing": { "blockGap": "0.7rem" } },
+      "core/image":   { "variations": { "rounded": { "border": { "radius": "0.5rem" } } } },
+      "core/list":    { "spacing":   { "padding": { "left": "var(--wp--preset--spacing--10)" } } },
+      "core/search":  {
+        "typography": { "fontSize": "var(--wp--preset--font-size--small)" },
+        "elements": { "button": { "border": { "radius": { "ref": "styles.elements.button.border.radius" } } } }
+      }
+    },
+// CSS direct injecté pour tous les éléments ayant le focus (accessibilité)
+    "css": ":where(.wp-site-blocks *:focus){outline-width:2px;outline-style:solid}"
+  },
+// Déclaration des parties de template (header/footer)
+  "templateParts": [
+    { "area": "header", "name": "header", "title": "Header" },
+    { "area": "footer", "name": "footer", "title": "Footer" }
+  ],
+// Déclaration des templates personnalisés supplémentaires
+  "customTemplates": [
+    { "name": "page-no-title", "postTypes": ["page"], "title": "Page sans titre" }
+  ]
+}

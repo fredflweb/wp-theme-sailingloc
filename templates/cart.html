@@ -1,12 +1,18 @@
-<!-- wp:template-part {"slug":"header","area":"header"} /-->
+<!-- en-tête du site -->
+<!-- wp:template-part {"slug":"header","area":"header"} /--> 
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- zone principale centrée -->
+<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
 <div class="wp-block-group">
-  <!-- wp:heading {"level":1} -->
-  <h1 class="wp-block-heading">panier</h1>
-  <!-- /wp:heading -->
+
+  <!-- titre dynamique, éditable dans l’admin -->
+  <!-- wp:post-title {"level":1,"textAlign":"center"} /-->
+
+  <!-- contenu WooCommerce : panier -->
   <!-- wp:woocommerce/cart /-->
+
 </div>
 <!-- /wp:group -->
 
+<!-- pied de page du site -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

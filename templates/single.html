@@ -1,20 +1,40 @@
+<!-- en-tête -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- contenu principal -->
+<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
 <div class="wp-block-group">
+
+  <!-- titre de l’article -->
   <!-- wp:post-title {"level":1} /-->
+
+  <!-- date de publication (cliquable) -->
   <!-- wp:post-date {"isLink":true} /-->
+
+  <!-- contenu de l’article -->
   <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+  <!-- espace de respiration -->
   <!-- wp:spacer {"height":"20px"} /-->
+
+  <!-- commentaires -->
   <!-- wp:comments -->
   <div class="wp-block-comments">
+    <!-- titre de la section commentaires -->
     <!-- wp:comments-title /-->
+
+    <!-- boucle des commentaires -->
     <!-- wp:comment-template -->
       <!-- wp:columns -->
       <div class="wp-block-columns">
+        <!-- avatar -->
         <!-- wp:column {"width":"40px"} -->
-        <div class="wp-block-column" style="flex-basis:40px"><!-- wp:avatar {"size":40,"style":{"border":{"radius":"20px"}}} /--></div>
+        <div class="wp-block-column" style="flex-basis:40px">
+          <!-- wp:avatar {"size":40,"style":{"border":{"radius":"20px"}}} /-->
+        </div>
         <!-- /wp:column -->
+
+        <!-- nom, date, contenu -->
         <!-- wp:column -->
         <div class="wp-block-column">
           <!-- wp:comment-author-name /-->
@@ -25,11 +45,17 @@
       </div>
       <!-- /wp:columns -->
     <!-- /wp:comment-template -->
+
+    <!-- formulaire d’ajout de commentaire -->
     <!-- wp:comment-respond /-->
+
+    <!-- pagination des commentaires -->
     <!-- wp:comments-pagination /-->
   </div>
   <!-- /wp:comments -->
+
 </div>
 <!-- /wp:group -->
 
+<!-- pied de page -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->

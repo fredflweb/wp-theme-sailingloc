@@ -1,13 +1,20 @@
+<!-- en-tête du site -->
 <!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
-  <!-- wp:heading {"level":1} -->
-  <h1 class="wp-block-heading">bateaux</h1>
-  <!-- /wp:heading -->
+<!-- zone principale avec mise en page contrainte -->
+<!-- wp:group {"layout":{"type":"constrained"}, "tagName":"main"} -->
+  <div class="wp-block-group">
+  
+    <!-- titre dynamique de la page d’archive (ex : “Catégorie : Voiliers”) -->
+    <!-- s’adapte automatiquement au contexte (produits, catégorie, etc.) -->
+    <!-- wp:post-title {"level":1,"textAlign":"center"} /-->
 
-  <!-- wp:woocommerce/product-collection {"query":{"perPage":12},"layout":{"type":"grid","columns":3}} /-->
-</div>
+    <!-- grille des produits WooCommerce, 3 colonnes, 12 par page -->
+    <!-- wp:woocommerce/product-collection {"query":{"perPage":12},"layout":{"type":"grid","columns":3}} /-->
+
+  </div>
 <!-- /wp:group -->
 
+<!-- pied de page du site -->
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->
+
